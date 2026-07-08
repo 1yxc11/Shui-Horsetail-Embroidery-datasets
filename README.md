@@ -20,18 +20,22 @@ This dataset provides high-fidelity visual references and precise geometric anno
 | Data Type | Quantity | Format  | Description |
 | :--- | :--- |:--------| :--- |
 | **Real-world Images** | 1,000 | `.png`  | Covering diverse motifs (e.g., butterflies, dragons). |
-| **Vector Annotations** | 5 | `.svg`  | Detailed manual path tracing of core structures. |
+| **Vector Annotations** | 1,000 | `.svg`  | Complete manual path tracing of the corresponding image set. |
 
 ## 4. Annotation Specification
 The vector data is annotated using **Inkscape**:
 * **Methodology:** Paths are fitted using **Bézier Curves** to represent the center-line.
 * **Attributes:** Annotations include coordinate data and derived parametric information.
+* **Full Release:** The complete set of 1,000 traced SVG annotations is provided in `annotations/vector_1000/`, with filenames aligned to the raster image IDs in `images/`.
 
 ## 5. Repository Structure
 ```bash
 VP-SHE-Dataset/
 ├── images/             # 1,000 raw embroidery images
 ├── annotations/        # Manual vector path data
+│   ├── vector_1000/    # 1,000 traced SVG annotations
+│   ├── vector/         # Original representative annotation examples
+│   └── rawdata/        # Raw images corresponding to the examples
 ├── docs/               # Documentation
 ├── LICENSE             # Creative Commons Attribution 4.0
 └── README.md
@@ -46,5 +50,5 @@ If you use this dataset or the VP-SHE framework in your research, please cite ou
   author={YI},
   journal={},
   year={2026},
-  url={https://github.com/YourUsername/VP-SHE-Dataset}
+  url={https://github.com/1yxc11/Shui-Horsetail-Embroidery-datasets}
 }
